@@ -1,10 +1,11 @@
 // import { Audio } from "react-loader-spinner";
 import Layout from "./components/Layout";
+import Tabs from './components/Tabs';
 
 function App() {
   return (
     <Layout>
-      <p>ehsan zidi</p>
+      <Tabs />
     </Layout>
   );
 }

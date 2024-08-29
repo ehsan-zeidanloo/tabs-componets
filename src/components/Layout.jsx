@@ -5,7 +5,7 @@ function Layout({ children }) {
   return (
     <>
       <header className={styles.header}>
-        <p> Botostart.ir | product Page </p>
+        <h2> Ehsan Academy || React Course </h2>
       </header>
 
       {children}
