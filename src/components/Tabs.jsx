@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { contents } from "../constants/data";
 
 import styles from "./Tabs.module.css";
@@ -10,7 +10,16 @@ function Tabs() {
     const result = e.target.id;
     console.log(typeof result, result);
     setId(result);
+    localStorage.setItem("tab",JSON.stringify(result))
   };
+
+  useEffect(() => {
+   const storedTab=localStorage.getItem("tab");
+if(storedTab){
+  setId(JSON.parse(storedTab))
+}
+  }, [])
+  
 
   const filteredContent = contents.find((content) => content.id === +id);
   return (
